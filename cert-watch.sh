@@ -11,5 +11,7 @@ inotifywait --monitor --event moved_to --timefmt %FT%T%z --format %T \
 
   echo "Certificate change at $timestamp."
   /usr/local/sbin/xrd-certs-init.sh
+  # XRootD doesn't automatically reload certs on change
+  supervisorctl restart xrootd-redirector
 
 done
