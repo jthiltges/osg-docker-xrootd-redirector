@@ -7,7 +7,7 @@ mkdir -p ${DEST_DIR}
 # grid-security
 if [ -f "$CERT_DIR/hostcert.pem" ]; then
     cp -f "$CERT_DIR/hostcert.pem" $DEST_DIR/xrdcert.pem
-    cp -f "$CERT_DIR/hostkey.pem"   $DEST_DIR/xrdkey.pem
+    cp -f "$CERT_DIR/hostkey.pem"  $DEST_DIR/xrdkey.pem
 # cert-manager
 elif [ -f "$CERT_DIR/tls.crt" ]; then
     cp -f "$CERT_DIR/tls.crt" $DEST_DIR/xrdcert.pem
